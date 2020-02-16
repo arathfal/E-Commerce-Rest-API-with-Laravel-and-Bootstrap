@@ -1,0 +1,182 @@
+
+@font-face {
+
+	font-family: judul;
+	src: url(fonts/goodfishbd.ttf);
+
+}
+
+
+body {
+
+	background-color: 	#F5F5F5;
+
+}
+
+section.featured {
+
+	padding: 150px 100px 150px 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #2E8B57;
+	color : white;
+
+}
+
+footer.credit {
+
+	margin-top: 50px;
+	padding: 50px 100px 50px 100px;
+	background-color: #000000;
+	color : white;
+
+}
+
+p.ending {
+
+	font-size: 13px;
+
+}
+
+.link-gambar {
+
+	font-family: judul-gambar;
+	/*-webkit-text-stroke: 1px black;*/
+	text-decoration: none;
+	color: white;
+	font-size: 50px;
+	text-shadow:
+	3px 3px 0 #000,
+	-1px -1px 0 #000,  
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+
+}
+
+.link-gambar:hover {
+
+	text-decoration: none;
+	color: #2E8B57;
+
+}
+
+#container {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#container.toggled {
+	padding-left: 250px;
+}
+
+#sidebar {
+	z-index: 1000;
+	position: fixed;
+	left: 250px;
+	width: 0;
+	height: 100%;
+	margin-left: -250px;
+	overflow-y: auto;
+	background: #2F4F4F;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#container.toggled #sidebar {
+	width: 250px;
+}
+
+#page-content-container {
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+}
+
+#container.toggled #page-content-container {
+	position: absolute;
+	margin-right: -250px;
+}
+
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.sidebar-nav li a:hover {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	background: #132020;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+	text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+	height: 65px;
+	font-size: 18px;
+	line-height: 60px;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+	color: #fff;
+	background: none;
+	font-weight: bold;
+}
+
+.active {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	background: #132020;
+}
+
+@media(min-width:768px) {
+	#container {
+		padding-left: 250px;
+	}
+
+	#container.toggled {
+		padding-left: 0;
+	}
+
+	#sidebar {
+		width: 250px;
+	}
+
+	#container.toggled #sidebar {
+		width: 0;
+	}
+
+	#page-content-container {
+		padding: 20px;
+		position: relative;
+	}
+
+	#container.toggled #page-content-container {
+		position: relative;
+		margin-right: 0;
+	}
+}
